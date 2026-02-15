@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Page</title>
+
+<style>
+  body{
+    font-family: Arial;
+    background: #f2f2f2;
+  }
+
+  nav{
+    text-align: right;
+  }
+
+  nav a{
+    text-decoration: none;
+    margin: 5px;
+    color: blue;
+  }
+
+  form{
+    background: white;
+    padding: 15px;
+    width: 300px;
+    margin: auto;
+    border: 1px solid black;
+  }
+
+  input, textarea, select{
+    margin-top: 5px;
+  }
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html" style="font-weight:bold;">Home</a> |
+  <a href="about.html">About Me</a> |
+  <a href="projects.html">Projects</a> |
+  <a href="form.html">Form</a>
+</nav>
+
+<hr>
+
+<form action="index.html" method="get">
+
+  <label style="font-size:18px;"><b>Fill the form</b></label><br><br>
+
+  <label><b>Full Name:</b></label><br>
+  <input type="text" name="name" required style="width:95%;"><br><br>
+
+  <label><b>Address:</b></label><br>
+  <input type="text" name="address" required><br><br>
+
+  <label><b>Email:</b></label><br>
+  <input type="email" name="email"><br><br>
+
+  <label><b>Password:</b></label><br>
+  <input type="password" name="password" required><br><br>
+
+  <label><b>Gender:</b></label><br>
+  <input type="radio" name="gender"> Male
+  <input type="radio" name="gender"> Female
+  <input type="radio" name="gender"> Other
+  <br><br>
+
+  <label><b>Date of Birth:</b></label><br>
+  <input type="date" name="dob"><br><br>
+
+  <label><b>Skills:</b></label><br>
+  <input type="checkbox"> Web
+  <input type="checkbox"> AI
+  <br><br>
+
+  <label><b>Full Address:</b></label><br>
+  <textarea rows="3" cols="30" style="resize:none;"></textarea><br><br>
+
+  <label><b>Country:</b></label><br>
+  <select style="width:120px;">
+    <option>Nepal</option>
+    <option>India</option>
+  </select>
+  <br><br>
+
+  <input type="checkbox" required> I agree to terms
+  <br><br>
+
+  <input type="submit" style="background:teal; color:white;">
+  <input type="reset">
+
+</form>
+
+</body>
+</html>
