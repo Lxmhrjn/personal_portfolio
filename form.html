@@ -9,10 +9,13 @@
   body{
     font-family: Arial;
     background: #f2f2f2;
+    margin: 0;
+    padding: 0;
   }
 
   nav{
     text-align: right;
+    padding: 10px;
   }
 
   nav a{
@@ -24,13 +27,39 @@
   form{
     background: white;
     padding: 15px;
-    width: 300px;
-    margin: auto;
+    width: 90%;          /* changed to percentage */
+    max-width: 400px;    /* limits form width on big screens */
+    margin: 20px auto;
     border: 1px solid black;
+    box-sizing: border-box;
   }
 
   input, textarea, select{
     margin-top: 5px;
+    width: 100%;         /* inputs take full width of form */
+    box-sizing: border-box;
+  }
+
+  input[type="submit"], input[type="reset"]{
+    width: 48%;
+    padding: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  /* Small screens adjustments */
+  @media (max-width: 500px) {
+    nav{
+      text-align: center;
+      font-size: 14px;
+    }
+    form{
+      padding: 10px;
+    }
+    input[type="submit"], input[type="reset"]{
+      width: 100%;
+      margin-top: 5px;
+    }
   }
 </style>
 </head>
@@ -47,11 +76,10 @@
 <hr>
 
 <form action="index.html" method="get">
-
   <label style="font-size:18px;"><b>Fill the form</b></label><br><br>
 
   <label><b>Full Name:</b></label><br>
-  <input type="text" name="name" required style="width:95%;"><br><br>
+  <input type="text" name="name" required><br><br>
 
   <label><b>Address:</b></label><br>
   <input type="text" name="address" required><br><br>
@@ -80,7 +108,7 @@
   <textarea rows="3" cols="30" style="resize:none;"></textarea><br><br>
 
   <label><b>Country:</b></label><br>
-  <select style="width:120px;">
+  <select>
     <option>Nepal</option>
     <option>India</option>
   </select>

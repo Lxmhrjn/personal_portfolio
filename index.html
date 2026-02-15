@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alex Maharjan | Portfolio</title>
 
 <style>
   body{
     font-family: Arial;
     background: #f2f2f2;
+    margin: 0;
+    padding: 0;
   }
 
   header, footer{
@@ -19,6 +22,7 @@
 
   nav{
     text-align: right;
+    padding: 5px 10px;
   }
 
   nav a{
@@ -29,16 +33,32 @@
 
   main, aside{
     padding: 10px;
+    max-width: 800px;
+    margin: auto;
   }
 
   img{
     display: block;
     margin: auto;
     border: 1px solid black;
+    max-width: 25%;
+    height: auto;
   }
 
   aside{
     background: #ddd;
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 500px) {
+    nav{
+      text-align: center;
+      font-size: 14px;
+    }
+    main, aside{
+      padding: 5px;
+    }
   }
 </style>
 </head>
@@ -67,7 +87,7 @@
   </p>
 
   <figure>
-    <img src="a.jpg" width="200" style="border-radius: 10px;">
+    <img src="a.jpg" style="border-radius: 10px;">
     <figcaption align="center" style="font-size: 14px;">
       My Profile Pic
     </figcaption>
